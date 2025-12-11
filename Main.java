@@ -31,12 +31,5 @@ public class Main {
             sorter.sortChildrenAscending(docs, Sorting.Mode.NAME);
             printer.print(root);
         }
-
-        System.out.println("\n=== Add by path demo ===");
-        TreeBuilder tb = new TreeBuilder();
-        Node extra = new Node("newfile.txt", "2025-12-09", Node.Type.FILE, 1);
-        boolean ok = tb.addByPath(root, "/Local Disk C/Documents", extra);
-        System.out.println("Added to /Local Disk C/Documents ? " + ok);
-        printer.print(root);
     }
 }
