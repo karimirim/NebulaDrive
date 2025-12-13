@@ -61,14 +61,14 @@ public class TreeBuilder {
         Node bin = new Node("Recycle Bin", "2025-09-13", Node.Type.FILE, 20);// ke desktop
 
         // file design
-        Node logo = new Node("Logo_Project.png", "2025-09-14", Node.Type.FILE);
-        Node poster = new Node("Poster_Event.cdr", "2025-09-14", Node.Type.FILE);
-        Node banner = new Node("Banner_Competition.psd", "2025-09-14", Node.Type.FILE);
-        Node iconPack = new Node("Icon_Pack.ai", "2025-09-14", Node.Type.FILE);
-        Node mockup = new Node("Mockup_SocialMedia.psd", "2025-09-14", Node.Type.FILE);
-        Node layout = new Node("Layout_Magazine.indd", "2025-09-14", Node.Type.FILE);
-        Node brushpack = new Node("BrushPack_ABR.abr", "2025-09-14", Node.Type.FILE);
-        Node colorPalette = new Node("Color_Palette.json", "2025-09-14", Node.Type.FILE);
+        Node logo = new Node("Logo_Project.png", "2025-09-14", Node.Type.FILE, 12);
+        Node poster = new Node("Poster_Event.cdr", "2025-09-14", Node.Type.FILE, 234);
+        Node banner = new Node("Banner_Competition.psd", "2025-09-14", Node.Type.FILE, 590);
+        Node iconPack = new Node("Icon_Pack.ai", "2025-09-14", Node.Type.FILE, 300);
+        Node mockup = new Node("Mockup_SocialMedia.psd", "2025-09-14", Node.Type.FILE, 102);
+        Node layout = new Node("Layout_Magazine.indd", "2025-09-14", Node.Type.FILE, 80);
+        Node brushpack = new Node("BrushPack_ABR.abr", "2025-09-14", Node.Type.FILE, 123);
+        Node colorPalette = new Node("Color_Palette.json", "2025-09-14", Node.Type.FILE, 4);
 
         // SEMESTER 1 EXTRA FILES
         Node kalkulusLatihan1 = new Node("Latihan_Kalkulus_1.pdf", "2025-09-15", Node.Type.FILE, 95);
@@ -288,18 +288,6 @@ public class TreeBuilder {
         praktikum5.addChild(praktikum5Dataset);
         praktikum5.addChild(praktikum5Notes);
         praktikum5.addChild(praktikum5Debug);
-
-        // Bonus random kampus biar makin chaos
-        kampus.addChild(tugasRandom1);
-        kampus.addChild(tugasRandom2);
-        kampus.addChild(tugasRandom3);
-        kampus.addChild(tugasRandom4);
-        kampus.addChild(tugasRandom5);
-        kampus.addChild(tugasRandom6);
-        kampus.addChild(tugasRandom7);
-        kampus.addChild(tugasRandom8);
-        kampus.addChild(tugasRandom9);
-        kampus.addChild(tugasRandom10);
 
         // ================= DISK E =================
         diskE.addChild(genshin);
