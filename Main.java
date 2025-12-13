@@ -4,6 +4,7 @@ public class Main {
         Node root = builder.buildSample(); // root = USER
 
         TreePrinter printer = new TreePrinter();
+
         System.out.println("=== Printer (pretty) ===");
         printer.print(root);
 
@@ -19,17 +20,34 @@ public class Main {
 
         System.out.println("\n=== Searching Demo ===");
         Searching s = new Searching();
-        Node found = s.dfs(root, "photo.png");
-        System.out.println(found != null ? "Found (DFS): " + found : "Not found (DFS)");
-        found = s.bfs(root, "Main.java");
-        System.out.println(found != null ? "Found (BFS): " + found : "Not found (BFS)");
 
-        System.out.println("\n=== Sorting Demo (Documents by NAME) ===");
-        Node docs = s.dfs(root, "Documents");
-        if (docs != null) {
+        Node found = s.dfs(root, "as.pptx");
+        if (found != null) {
+            System.out.println("Found (DFS):");
+            printer.printSinglePath(found);
+            System.out.println();
+        } else {
+            System.out.println("Not Found (DFS):");
+            System.out.println("No items match your search");
+            System.out.println();
+        }
+
+        found = s.bfs(root, "an.psd");
+        if (found != null) {
+            System.out.println("Found (BFS):");
+            printer.printSinglePath(found);
+            System.out.println();
+        } else {
+            System.out.println("Not Found (BFS):");
+            System.out.println("No items match your search");
+        }
+
+        System.out.println("\n=== Sorting Demo (Folder + File) ===");
+        Node sem3 = s.dfs(root, "Local Disk C");
+        if (sem3 != null) {
             Sorting sorter = new Sorting();
-            sorter.sortChildrenAscending(docs, Sorting.Mode.NAME);
-            printer.print(root);
+            sorter.sortChildrenAscending(sem3, Sorting.Mode.NAME);
+            printer.printChildrenOnly(sem3);
         }
     }
 }
